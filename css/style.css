@@ -122,3 +122,273 @@ nav {
     border-radius: 50%;
     border: 5px solid #2563EB;
 }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: center;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #2563EB;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    color: #2563EB;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #2563EB;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.experience-item {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.experience-item h3 {
+    color: #2563EB;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.experience-item p {
+    line-height: 1.8;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.lead-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lead-card h3 {
+    color: #2563EB;
+    margin-bottom: 15px;
+}
+
+.lead-card p {
+    line-height: 1.7;
+}
+
+.lead-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cert-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card a {
+    display: block;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-card img:hover {
+    transform: scale(1.03);
+}
+
+.cert-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.cert-card p {
+    margin-bottom: 8px;
+}
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2563EB;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-links a:hover {
+    background-color: #1D4ED8;
+}
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.project-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-links span {
+    color: #666;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+
+#education .education-item {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#education .education-item h3,
+#education .education-item .role,
+#education .education-item p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.scroll-buttons {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.scroll-buttons button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #1f2937;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.scroll-buttons button:hover {
+    opacity: 0.85;
+}
