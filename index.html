@@ -18,12 +18,17 @@
             <a href="#top" class="logo">Amina<span>Mohamed</span></a>
 
             <div class="nav-right">
-                <ul class="nav-links">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#leadership">Leadership</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -38,28 +43,32 @@
             <div class="container hero-inner">
                 <div class="hero-content reveal">
                     <p class="eyebrow">Software Engineer • Cloud Enthusiast</p>
-                    <h1>Building practical digital solutions for real-world impact.</h1>
+                    <h1>Software Engineer | Cloud Engineering | Building Practical Digital Solutions</h1>
                     <p class="hero-text">
                         I’m <strong>Amina Mohamed Gaani</strong>, a Software Engineering student at USIU-Africa
-                        focused on cloud engineering, full-stack development, and creating secure,
-                        scalable systems that solve meaningful problems.
+                        developing practical skills in cloud engineering, software development, infrastructure,
+                        and automation through real projects and hands-on learning.
                     </p>
 
                     <div class="hero-buttons">
-                        <a class="btn btn-primary" href="assets/Amina-Mohamed-Gaani-CV.pdf" target="_blank" rel="noreferrer">View CV</a>
+                        <!-- Update the CV by replacing this PDF while keeping its filename and location. -->
+                        <a class="btn btn-primary" href="assets/Amina-Mohamed-Gaani-CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+                        <a class="btn btn-secondary" href="assets/Amina-Mohamed-Gaani-CV.pdf" download="Amina-Mohamed-Gaani-CV.pdf">Download CV</a>
                         <a class="btn btn-secondary" href="#projects">Explore Projects</a>
                     </div>
 
                     <ul class="hero-points">
                         <li>AWS & Linux</li>
-                        <li>React & Node.js</li>
-                        <li>Full-stack development</li>
+                        <li>Cloud Fundamentals</li>
+                        <li>Automation & DevOps</li>
                     </ul>
                 </div>
 
-                <div class="hero-visual reveal" aria-label="Profile picture of Amina Mohamed Gaani">
+                <div class="hero-visual reveal">
                     <div class="profile-frame">
-                        <img src="images/profile.jpg" alt="Amina Mohamed Gaani portrait">
+                        <!-- Replace images/profile.jpg to use a different profile photograph. -->
+                        <img src="images/profile.jpg" alt="Portrait of Amina Mohamed Gaani">
+                        <div class="profile-placeholder" aria-hidden="true">AMG</div>
                     </div>
                     <div class="floating-badge badge-top">Cloud-ready</div>
                     <div class="floating-badge badge-bottom">Open to internships</div>
@@ -70,20 +79,16 @@
         <section class="stats-strip">
             <div class="container stats-grid">
                 <div class="stat-box reveal">
-                    <span class="stat-number">2+</span>
+                    <span class="stat-number">3+</span>
                     <span class="stat-label">Projects shipped</span>
                 </div>
                 <div class="stat-box reveal">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label">Technical skills</span>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Core skill areas</span>
                 </div>
                 <div class="stat-box reveal">
                     <span class="stat-number">3</span>
-                    <span class="stat-label">Key certifications</span>
-                </div>
-                <div class="stat-box reveal">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Growth mindset</span>
+                    <span class="stat-label">Certifications</span>
                 </div>
             </div>
         </section>
@@ -92,19 +97,18 @@
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow accent">About Me</p>
-                    <h2>Engineer with curiosity, creativity, and a problem-solving mindset.</h2>
+                    <h2>Building practical technology with curiosity and purpose.</h2>
                 </div>
 
                 <div class="about-panel">
                     <p>
-                        I am a Software Engineering student at USIU-Africa with a growing interest in Cloud Engineering,
-                        distributed systems, and scalable software. I enjoy designing practical systems, learning how
-                        they are deployed and secured, and translating technical ideas into real-world solutions.
+                        I am a Software Engineering student at USIU-Africa, building a strong foundation in software design,
+                        application development, and problem solving while growing my understanding of cloud engineering and infrastructure.
                     </p>
                     <p>
-                        My work combines technical execution with community impact. Whether I am building a digital platform,
-                        helping people access services, or learning new cloud tools, my focus is always on making systems
-                        more useful, efficient, and reliable.
+                        I enjoy creating digital solutions that are useful, reliable, and accessible, and I am continuously
+                        developing my skills in Linux, networking, automation, cloud services, and full-stack development.
+                        My work is driven by curiosity and a desire to learn by building real projects that solve genuine problems.
                     </p>
                 </div>
             </div>
@@ -114,60 +118,50 @@
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow accent">Skills</p>
-                    <h2>What I bring to a team.</h2>
+                    <h2>Focused on infrastructure, software development, and practical problem solving.</h2>
                 </div>
 
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <h3>Cloud & DevOps</h3>
-                        <p>AWS EC2, Linux, Git, GitHub, deployment workflows, server configuration</p>
+                        <h3>Cloud Computing and Infrastructure</h3>
+                        <p><strong>Used:</strong> AWS EC2, Ubuntu, Apache, GitHub</p>
+                        <p><strong>Currently learning:</strong> AWS S3, IAM, networking, monitoring, and cost management</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Programming</h3>
-                        <p>Java, Python, JavaScript, PHP, HTML, CSS</p>
+                        <h3>Linux and Systems Administration</h3>
+                        <p><strong>Used:</strong> Linux, Ubuntu, server setup, configuration tasks</p>
+                        <p><strong>Currently learning:</strong> Linux administration, shell scripting, and system operations</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Frontend</h3>
-                        <p>React, responsive UI design, JavaScript interactivity, UX-focused layouts</p>
+                        <h3>DevOps and Automation</h3>
+                        <p><strong>Used:</strong> Git, GitHub, deployment workflows</p>
+                        <p><strong>Currently learning:</strong> Docker, Terraform, CI/CD, and automation practice</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Backend</h3>
-                        <p>Node.js, Express, RESTful APIs, database integration</p>
+                        <h3>Software Development</h3>
+                        <p><strong>Used:</strong> Java, Python, JavaScript, PHP, HTML, CSS</p>
+                        <p><strong>Currently learning:</strong> backend architecture, API design, and scalable application patterns</p>
                     </div>
 
                     <div class="skill-card">
                         <h3>Databases</h3>
-                        <p>MySQL, SQLite, Oracle, data modeling and persistence</p>
+                        <p><strong>Used:</strong> MySQL, SQLite, Oracle</p>
+                        <p><strong>Currently learning:</strong> database design, optimization, and cloud database fundamentals</p>
                     </div>
 
                     <div class="skill-card">
-                        <h3>Tools</h3>
-                        <p>VS Code, XAMPP, Apache, Git, Linux, project collaboration</p>
+                        <h3>Development Tools</h3>
+                        <p><strong>Used:</strong> VS Code, XAMPP, Git, GitHub</p>
+                        <p><strong>Currently learning:</strong> Docker, Terraform, and modern CI/CD tooling</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow accent">Education</p>
-                    <h2>Academic foundation.</h2>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-badge">2023 - 2027</div>
-                    <h3>Bachelor of Science in Software Engineering</h3>
-                    <p class="role">United States International University-Africa (USIU-Africa)</p>
-                    <p>Focused on software systems, web technologies, problem solving, and modern engineering practices.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section alt-bg">
+        <section id="projects" class="section">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow accent">Featured Projects</p>
@@ -220,7 +214,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section alt-bg">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow accent">Experience</p>
@@ -255,27 +249,52 @@
             </div>
         </section>
 
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow accent">Education</p>
+                    <h2>Academic foundation.</h2>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-badge">2023 - 2027</div>
+                    <h3>Bachelor of Science in Software Engineering</h3>
+                    <p class="role">United States International University-Africa (USIU-Africa)</p>
+                    <p>Expected graduation: 2027. Focused on software systems, web technologies, problem solving, and modern engineering practices.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="leadership" class="section alt-bg">
             <div class="container">
                 <div class="section-heading">
-                    <p class="eyebrow accent">Leadership & Impact</p>
+                    <p class="eyebrow accent">Leadership & Community Impact</p>
                     <h2>Service, teamwork, and initiative.</h2>
                 </div>
 
                 <div class="leadership-grid">
                     <div class="lead-card">
                         <h3>Community Action Project</h3>
-                        <p>Contributed to a school improvement project that helped create better learning conditions for pupils.</p>
+                        <p>
+                            Community Action Project at Maumau Primary School in Wajir West, Kenya, where I contributed to building
+                            and installing 46 three-seater desks, benefiting more than 135 pupils and equipping four classrooms.
+                        </p>
                     </div>
 
                     <div class="lead-card">
                         <h3>Volunteer Teaching</h3>
-                        <p>Supported classroom learning activities during a teacher shortage to help students continue their education.</p>
+                        <p>
+                            Supported students at Ananda Marga Academy during a teacher shortage by assisting with classroom learning
+                            activities and helping maintain continuity in instruction.
+                        </p>
                     </div>
 
                     <div class="lead-card">
-                        <h3>Technology Events</h3>
-                        <p>Participated in startup and tech events, including hackathons and community tech discussions.</p>
+                        <h3>Technology Events and Hackathons</h3>
+                        <p>
+                            Participated in technology events and hackathons, including community-driven startup and innovation spaces
+                            that strengthened my interest in practical problem solving and collaborative engineering.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -350,142 +369,6 @@
     </div>
 
     <script src="js/script.js"></script>
-</body>
-
-</html>
-
-
-    <div class="container">
-
-        <h2>Leadership And Community Impact</h2>
-
-        <div class="leadership-grid">
-
-            <div class="lead-card">
-
-                <h3>Community Action Project (CAP)</h3>
-
-                <p>
-                    Contributed to a community project that improved learning conditions
-                    for pupils at a rural primary school through the construction and
-                    installation of classroom desks.
-                </p>
-
-            </div>
-
-            <div class="lead-card">
-
-                <h3>Volunteer Teaching</h3>
-
-                <p>
-                    Supported students at Ananda Marga Academy during a teacher shortage
-                    by assisting with classroom learning activities.
-                </p>
-
-            </div>
-
-            <div class="lead-card">
-
-                <h3>Technology Events & Hackathon</h3>
-
-                <p>
-                    Participated in the Nairobi Startup Club hackathon and attended
-                    technology events including Tech Sisters Kenya and Google/Moringa sessions.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-   <section id="certifications" class="section">
-
-    <div class="container">
-
-        <h2>Certifications</h2>
-
-        <div class="cert-grid">
-
-            <div class="cert-card">
-
-                <a href="certificates/aspire-leaders.jpg" target="_blank">
-                    <img src="certificates/aspire-leaders.jpg" alt="Aspire Leaders Program">
-                </a>
-
-                <h3>Aspire Leaders Program</h3>
-
-                <p><strong>Organization:</strong> Aspire Institute</p>
-
-                <p><strong>Issued:</strong> July 2026</p>
-
-            </div>
-
-            <div class="cert-card">
-
-                <a href="certificates/cisco-network-technician.jpg" target="_blank">
-                    <img src="certificates/cisco-network-technician.jpg" alt="Cisco Network Technician">
-                </a>
-
-                <h3>Network Technician Career Path</h3>
-
-                <p><strong>Organization:</strong> Cisco</p>
-
-                <p><strong>Issued:</strong> December 2025</p>
-
-            </div>
-
-            <div class="cert-card">
-
-                <a href="certificates/emobilis-web-development.jpg" target="_blank">
-                    <img src="certificates/emobilis-web-development.jpg" alt="Website Development Boot Camp">
-                </a>
-
-                <h3>Website Development Boot Camp</h3>
-
-                <p><strong>Organization:</strong> eMobilis Technology Training Institute</p>
-
-                <p><strong>Issued:</strong> August 2025</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section id="contact" class="section">
-
-    <div class="container">
-
-        <h2>Contact</h2>
-
-        <p>
-            Feel free to reach out for opportunities, collaborations, or internships.
-        </p>
-
-        <div class="contact-links">
-
-            <a href="mailto:amishmohamedd@gmail.com">Email</a>
-            <a href="https://github.com/Gaani4mishaa" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/amina-mohamed-47794b297" target="_blank">LinkedIn</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-    </main>
-
-<div class="scroll-buttons">
-    <button id="scrollTop" aria-label="Scroll to top">↑</button>
-    <button id="scrollBottom" aria-label="Scroll to bottom">↓</button>
-</div>
-<script src="js/script.js"></script>
-
 </body>
 
 </html>
