@@ -4,7 +4,7 @@ Personal portfolio website showcasing my software engineering projects, cloud en
 
 ## Live Website
 
-[Visit Portfolio](http://63.180.17.7/portfolio-website/)
+[Visit Portfolio](https://portfoliowebsite-et1.pages.dev/)
 
 ## Featured Projects
 
@@ -15,7 +15,7 @@ A web-based community services platform designed to help refugee communities acc
 **Technologies:** PHP, MySQL, JavaScript, AWS EC2, Ubuntu, Apache, Git
 
 [GitHub Repository](https://github.com/Gaani4mishaa/kakuma-refugee-kiosk)  
-[Live Demo](http://63.180.17.7/kakuma-refugee-kiosk/)
+
 
 ### Trivia Masters - Multiplayer Trivia Game
 
