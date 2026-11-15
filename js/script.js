@@ -187,19 +187,58 @@ function renderAbout() {
         </div>`;
 }
 
-function previewMarkup(project, index) {
-    const labels = ["COMMUNITY SERVICES", "CIVIC SYSTEMS", "RECIPE COLLECTION", "MULTIPLAYER LIVE", "WELLNESS CHECK-IN"];
-    return `<div class="project-preview" aria-hidden="true"><div class="preview-window"><div class="preview-bar"><i></i><i></i><i></i></div><div class="preview-lines"><span></span><span></span><span></span></div></div><span class="preview-label">${labels[index]}</span></div>`;
+function previewMarkup(project) {
+    const previews = {
+        community: `<div class="preview-kakuma">
+            <header class="mock-top"><span class="mock-brand"><i>K</i> kakuma<span>connect</span></span><span class="mock-languages">EN <b>SW</b> SO</span></header>
+            <div class="mock-kakuma-body"><div class="mock-kakuma-main"><span class="mock-overline">WELCOME · KARIBU · SOO DHAWAW</span><strong>Find support.<br><em>Build community.</em></strong><div class="mock-search"><span>⌕</span> What do you need today?<b>↗</b></div></div>
+                <aside class="mock-kakuma-side"><div class="mock-widget-heading">COMMUNITY UPDATE <b>•••</b></div><strong>Community health day</strong><small>Services &amp; announcements · Kakuma</small><span class="mock-update-link">Read announcement <i>↗</i></span></aside>
+            </div>
+            <div class="mock-resource-grid"><span><i>✚</i>Health</span><span><i>▤</i>Education</span><span><i>⌂</i>Essential services</span><span><i>◈</i>Skills &amp; work</span></div>
+        </div>`,
+        civic: `<div class="preview-flowtrack">
+            <div class="mock-flow-side"><div class="mock-flow-brand"><i>F</i> FlowTrack</div><span class="mock-side-active">▦ &nbsp; Overview</span><span>◉ &nbsp; Live reports</span><span>▤ &nbsp; Work orders</span><span>⌖ &nbsp; Service map</span><div class="mock-side-status"><i></i> OPERATIONS ACTIVE</div></div>
+            <div class="mock-flow-main"><div class="mock-flow-top"><span>Flood &amp; drainage overview</span><span class="mock-period">THIS WEEK⌄</span></div>
+                <div class="mock-metrics"><span><small>OPEN REPORTS</small><b>24</b><i>↗ Active cases</i></span><span><small>IN PROGRESS</small><b>08</b><i>Assigned crews</i></span><span><small>RESOLVED</small><b>16</b><i>Work completed</i></span></div>
+                <div class="mock-map-wrap"><div class="mock-map"><svg viewBox="0 0 360 112" preserveAspectRatio="none" aria-hidden="true"><path class="map-river" d="M-8 78 C42 49 67 91 112 56 S173 36 208 57 S269 97 310 55 S340 32 370 44"/><path class="map-road" d="M15 5 L74 105 M127 -5 L165 115 M268 -10 L238 117 M8 35 L341 24 M20 92 L353 79 M95 5 L314 112"/><path class="map-road map-road-bright" d="M-5 60 L364 55"/></svg><i class="map-pin pin-one">!</i><i class="map-pin pin-two">!</i><i class="map-pin pin-three">!</i><span class="mock-map-label">SERVICE AREA · NAIROBI</span></div>
+                    <div class="mock-work-orders"><div class="mock-widget-heading">MAINTENANCE QUEUE <b>VIEW ALL ↗</b></div><span><i class="queue-dot high"></i><b>Blocked drainage</b><small>Assigned · Crew 02</small></span><span><i class="queue-dot mid"></i><b>Flood report</b><small>Review · New report</small></span></div>
+                </div>
+            </div>
+        </div>`,
+        web: `<div class="preview-recipe">
+            <header class="mock-recipe-top"><span class="mock-recipe-brand"><i>✳</i> simmer<span> &amp; serve</span></span><span>Discover &nbsp; Collections &nbsp; <b>My kitchen</b></span><i class="mock-recipe-avatar">A</i></header>
+            <div class="mock-recipe-content"><div class="mock-recipe-copy"><span class="mock-overline">A LITTLE INSPIRATION</span><h3>Good food,<br><em>made simple.</em></h3><span class="mock-recipe-pill">Explore recipes <b>↗</b></span><small>FRESH IDEAS FOR YOUR TABLE</small></div>
+                <div class="mock-food-art" aria-label="Illustrative vector artwork of a vegetable bowl"><div class="food-napkin"></div><div class="food-plate"><div class="food-bowl"><i class="food-leaf leaf-a"></i><i class="food-leaf leaf-b"></i><i class="food-leaf leaf-c"></i><i class="food-tomato tomato-a"></i><i class="food-tomato tomato-b"></i><i class="food-carrot"></i><i class="food-grain"></i></div></div><span class="food-art-label">FRESH · SIMPLE · EVERYDAY</span></div>
+            </div>
+            <div class="mock-recipe-bottom"><span>FROM THE KITCHEN</span><b>Seasonal bowl</b><i>Chickpeas · greens · citrus</i><span class="mock-recipe-time">20 MIN &nbsp; · &nbsp; EASY</span></div>
+        </div>`,
+        realtime: `<div class="preview-trivia">
+            <header class="mock-trivia-top"><span><i>✦</i> TRIVIA <b>MASTERS</b></span><span class="mock-live"><i></i> ROOM LIVE</span><span>ROUND 04 / 10</span></header>
+            <div class="mock-trivia-body"><div class="mock-question-side"><div class="mock-countdown"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18"/><circle class="timer-progress" cx="22" cy="22" r="18"/></svg><b>18<small>s</small></b></div><span class="mock-overline">QUESTION 04</span><strong>Which planet is known<br>as the Red Planet?</strong><div class="mock-answers"><span><i>A</i> Venus</span><span class="answer-selected"><i>B</i> Mars <b>✓</b></span><span><i>C</i> Jupiter</span></div></div>
+                <aside class="mock-leaderboard"><div class="mock-widget-heading">LEADERBOARD <b>LIVE</b></div><span><i class="leader-rank">01</i><b>Sam K.</b><em>2,450</em></span><span class="leader-you"><i class="leader-rank">02</i><b>You</b><em>2,180</em></span><span><i class="leader-rank">03</i><b>Leah M.</b><em>1,920</em></span></aside>
+            </div>
+            <div class="mock-trivia-foot"><span>● 8 PLAYERS IN ROOM</span><span>ANSWER LOCKED IN <i>✓</i></span></div>
+        </div>`,
+        wellbeing: `<div class="preview-wellmind">
+            <header class="mock-well-top"><span><i>◌</i> wellmind</span><span>YOUR WELLNESS SPACE</span><i class="mock-well-avatar">A</i></header>
+            <div class="mock-well-body"><div class="mock-well-main"><span class="mock-overline">MONDAY · DAILY CHECK-IN</span><strong>How are you feeling<br>today?</strong><div class="mock-moods"><span><i>☀</i><small>Good</small></span><span class="mood-active"><i>◒</i><small>Okay</small></span><span><i>☁</i><small>Low</small></span><span><i>✳</i><small>Great</small></span><span><i>◔</i><small>Hard</small></span></div>
+                    <div class="mock-journal"><i>✎</i><span><b>Journal note</b><small>A few words about today...</small></span><em>＋</em></div></div>
+                <aside class="mock-mood-history"><div class="mock-widget-heading">MOOD HISTORY <b>7 DAYS⌄</b></div><div class="mood-chart"><div class="mood-y-labels"><span>Great</span><span>Okay</span><span>Low</span></div><svg viewBox="0 0 190 90" preserveAspectRatio="none" aria-hidden="true"><path class="mood-area" d="M0 59 C15 49 17 38 32 46 S48 61 63 48 S80 38 95 43 S111 23 126 36 S143 50 158 30 S177 37 190 18 L190 90 L0 90Z"/><path class="mood-line" d="M0 59 C15 49 17 38 32 46 S48 61 63 48 S80 38 95 43 S111 23 126 36 S143 50 158 30 S177 37 190 18"/><circle cx="95" cy="43" r="3"/><circle cx="158" cy="30" r="3"/></svg></div><div class="mood-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div><div class="mock-history-foot"><i></i> Check-in saved</div></aside></div>
+        </div>`
+    };
+    const title = project.type === "web" ? "RECIPE UI CONCEPT · ILLUSTRATIVE PREVIEW" : `${project.category.toUpperCase()} · ILLUSTRATIVE UI PREVIEW`;
+    return `<div class="project-preview preview-${esc(project.type)}"><div class="project-art" aria-hidden="true">${previews[project.type]}</div><span class="preview-label">${esc(title)}</span></div>`;
 }
 
-function projectMarkup(project, index) {
+function projectMarkup(project) {
     const availableRepos = new Map(githubRepos.map((repo) => [repo.name.toLowerCase(), repo]));
     const apiProject = availableRepos.get(project.id.toLowerCase());
-    const language = apiProject?.language ? `<span class="tag">${esc(apiProject.language)}</span>` : "";
-    const tech = project.tech.slice(0, 5).map((technology) => `<span class="tag">${esc(technology)}</span>`).join("");
-    return `<article class="project-card" data-category="${esc(project.type)}">${previewMarkup(project, index)}<div class="project-card-body">
+    const technologies = [...new Set(project.tech)];
+    if (apiProject?.language && !technologies.some((technology) => technology.toLowerCase() === apiProject.language.toLowerCase())) technologies.push(apiProject.language);
+    const tech = technologies.map((technology) => `<span class="tag">${esc(technology)}</span>`).join("");
+    return `<article class="project-card" data-category="${esc(project.type)}">${previewMarkup(project)}<div class="project-card-body">
         <div class="project-card-title"><div><div class="project-type">${esc(project.category)}</div><h2>${esc(project.title)}</h2>${project.subtitle ? `<div class="text-muted" style="font-size:9px;margin-top:2px">${esc(project.subtitle)}</div>` : ""}</div><span class="accent" aria-hidden="true">↗</span></div>
-        <p>${esc(project.description)}</p>${apiProject?.description && apiProject.description !== project.description ? `<p class="repo-description"><span>GITHUB REPOSITORY TEXT · </span>${esc(apiProject.description)}</p>` : ""}<div class="tech-list">${tech}${language}</div>
+        <p>${esc(project.description)}</p>${apiProject?.description && apiProject.description !== project.description ? `<p class="repo-description"><span>GITHUB REPOSITORY TEXT · </span>${esc(apiProject.description)}</p>` : ""}<div class="tech-list">${tech}</div>
         <div class="project-foot">${project.github ? `<a class="text-link" href="${esc(project.github)}" target="_blank" rel="noopener noreferrer">↗ GitHub</a>` : `<span class="text-link">Collaborative project</span>`}${project.demo ? `<a class="text-link" href="${esc(project.demo)}" target="_blank" rel="noopener noreferrer">Live demo ↗</a>` : ""}<button class="project-open" type="button" data-project="${esc(project.id)}" aria-label="View details for ${esc(project.title)}">Details +</button></div>
     </div></article>`;
 }
@@ -407,7 +446,7 @@ function openProject(projectId) {
         project.github ? `<a class="btn btn-primary" href="${esc(project.github)}" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a>` : "",
         project.demo ? `<a class="btn" href="${esc(project.demo)}" target="_blank" rel="noopener noreferrer">Open live demo ↗</a>` : ""
     ].join("");
-    dialogContent.innerHTML = `<article class="modal-project"><div class="eyebrow">${esc(project.category)}${project.group ? " · GROUP PROJECT" : ""}</div><h2 id="dialogTitle">${esc(project.title)}</h2><p class="modal-summary">${esc(project.description)}</p><div class="tech-list">${project.tech.map((item) => `<span class="tag">${esc(item)}</span>`).join("")}</div><div class="modal-details"><section><h3>Project details</h3><ul>${project.features.map((feature) => `<li>${esc(feature)}</li>`).join("")}</ul></section><section><h3>Technology</h3><ul>${project.tech.map((technology) => `<li>${esc(technology)}</li>`).join("")}</ul></section></div><div class="modal-actions">${actions || `<span class="text-muted" style="font-size:10px">Repository or live demo link not provided.</span>`}</div></article>`;
+    dialogContent.innerHTML = `<article class="modal-project"><div class="eyebrow">${esc(project.category)}</div><h2 id="dialogTitle">${esc(project.title)}</h2><p class="modal-summary">${esc(project.description)}</p><div class="tech-list">${project.tech.map((item) => `<span class="tag">${esc(item)}</span>`).join("")}</div><div class="modal-details"><section><h3>Project details</h3><ul>${project.features.map((feature) => `<li>${esc(feature)}</li>`).join("")}</ul></section><section><h3>Technology</h3><ul>${project.tech.map((technology) => `<li>${esc(technology)}</li>`).join("")}</ul></section></div><div class="modal-actions">${actions || `<span class="text-muted" style="font-size:10px">Repository or live demo link not provided.</span>`}</div></article>`;
     appDialog.showModal();
 }
 
